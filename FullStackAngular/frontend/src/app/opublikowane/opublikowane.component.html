@@ -1,0 +1,35 @@
+<div class='container p-4'>
+    <h1 class='text-center'>Opublikowane tutoriale</h1>
+    <div class="table-responsive p-2" style="max-height: 400px; overflow-y: auto;">
+      <table class="table table-striped table-hover table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Tytul</th>
+            <th>Opis</th>
+            <th>Opcje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of data">
+            <td>{{ row.tytul }}</td>
+            <td>{{ row.opis }}</td>
+            <td>
+              <div class='d-flex justify-content-center'>
+
+                <button (click)="initModalEdytuj(row)" class="btn rounded-circle p-1">
+                  <i class="bi bi-file-earmark-text"></i>
+                </button>
+                
+                <button (click)="initModalUsun(row)" class="btn btn-danger rounded-circle ms-2 p-1">
+                  <i class="bi bi-trash"></i>
+                </button>
+
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-modal-edytuj *ngIf="EventModalEdytuj" [tutorial]="dataToModal" [(closeModalEvent)]="EventModalEdytuj" [(refreshDataTable)]="refreshData"></app-modal-edytuj>
+    <app-modal-usun *ngIf="EventModalUsun" [tutorial]="dataToModal" [(closeModalEvent)]="EventModalUsun" [(refreshDataTable)]="refreshData"></app-modal-usun>
+  </div>

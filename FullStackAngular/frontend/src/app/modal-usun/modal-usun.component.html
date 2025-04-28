@@ -1,0 +1,17 @@
+<div class="modal show" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Usuń Tutorial {{tutorial.tytul}}</h5>
+                <button type="button" class="btn-close" (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+                <p>Czy na pewno chcesz usunąć Tutorial?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Anuluj</button>
+                <button type="button" class="btn btn-danger" (click)="deleteTutorial()">Usuń</button>
+            </div>
+        </div>
+    </div>
+</div>

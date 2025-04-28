@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';  
 import { Observable, throwError } from 'rxjs';  
 import { map, catchError } from 'rxjs/operators';
+import { env } from './env'
 
 // Nagłówki HTTP
 const headers = new HttpHeaders({
@@ -15,7 +16,7 @@ const headers = new HttpHeaders({
 
 export class HttpService {
 
-  private apiUrl = 'http://localhost:3000/api/tutorials';  
+  private apiUrl = `${env.SERVER_URL}/api/tutorials`;  
 
   constructor(private http: HttpClient) {}
 

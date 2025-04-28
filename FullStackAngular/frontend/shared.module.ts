@@ -3,7 +3,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { routes } from './src/app/app.routes';
 
 @NgModule({
   imports: [
@@ -11,7 +10,6 @@ import { routes } from './src/app/app.routes';
     FormsModule,             
     ReactiveFormsModule,     
     HttpClientModule,
-    RouterModule,
     RouterModule
   ],
   exports: [
@@ -20,9 +18,6 @@ import { routes } from './src/app/app.routes';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule
-  ],
-  providers: [
-    provideHttpClient(withFetch())  // Dodaj withFetch() do HttpClient
   ],
 })
 export class SharedModule {}

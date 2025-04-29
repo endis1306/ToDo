@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 var corsOptions = {
-origin: process.env.corsOptions_orgin_url || "http://localhost:3001"
+origin: process.env.CORS_ORIGIN_URL || "http://localhost:3001"
 };
 app.use(cors(corsOptions));
 // parse requests of content-type - application/json

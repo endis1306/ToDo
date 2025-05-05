@@ -36,4 +36,5 @@ Zobacz zrzuty ekranu w repozytorium, prezentujące funkcjonalność aplikacji:
 - Lista dynamicznie aktualizowana bez przeładowania strony
 - Przechowywanie danych w bazie MySQL (obecnie offline)
 
+---
 

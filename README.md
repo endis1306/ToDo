@@ -31,8 +31,8 @@ Zobacz zrzuty ekranu w repozytorium, prezentujące funkcjonalność aplikacji:
 
 ## 🚀 Funkcje
 
-- Dodawanie, edycja i usuwanie zadań
-- Oznaczanie zadań jako wykonane
+- Wyświetlanie, dodawanie, edytowanie i usuwanie Tutoriali
+- Wyszukiwanie tutoriali po nazwie lub id
 - Lista dynamicznie aktualizowana bez przeładowania strony
 - Przechowywanie danych w bazie MySQL (obecnie offline)
 
